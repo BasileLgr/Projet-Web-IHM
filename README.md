@@ -81,10 +81,10 @@ Voici la structure des fichiers dans ce projet :
 
 Ce projet a été réalisé par les membres du groupe de travail suivant :
 - [BENBRAHIM Yassin](https://grond.iut-fbleau.fr/benbrahi)
-- [HOCHLAH Raphael](https://grond.iut-fbleau.fr/hochlaf)
+- [HOCHLAH Raphael](https://grond.iut-fbleau.fr/hochlaf) **Product Owner**
 - [GHOUAR-TOUSSAINT Rafael](https://grond.iut-fbleau.fr/ghouar-t)
 - [ODDOS-MARCEL Gaël](https://grond.iut-fbleau.fr/oddos-ma)
 - [FOLLEA Thomas](https://grond.iut-fbleau.fr/follea)
-- [LEGRELLE Basile](https://grond.iut-fbleau.fr/legrelleb)
+- [LEGRELLE Basile](https://grond.iut-fbleau.fr/legrelleb) **Scrum Master**
 
 Chaque membre a contribué à la rédaction du rapport, à la conception des maquettes, et au développement du prototype.
