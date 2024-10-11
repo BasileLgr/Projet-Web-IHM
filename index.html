@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Basique avec Web3CSS</title>
+    <title>Accueil</title>
     <!-- Lien vers Web3CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
@@ -11,13 +11,14 @@
 
 <!-- Conteneur principal -->
 <div class="w3-container w3-teal w3-center w3-padding-64">
-    <h1 class="w3-xxxlarge">Salut je suis une page internet</h1>
-    <p class="w3-large">Ceci est une page très simple avec du texte.</p>
+    <h1 class="w3-xxxlarge">Choisissez votre rôle</h1>
 </div>
 
-<!-- Deuxième section -->
-<div class="w3-container w3-light-grey w3-center w3-padding-64">
-    <p class="w3-xlarge w3-text-teal">En vrai déjà ouf le taf non ?</p>
+<!-- Section avec boutons -->
+<div class="w3-container w3-center w3-padding-64">
+    <button class="w3-button w3-teal w3-xlarge w3-margin" onclick="window.location.href='pages/enseignant_board.html'">Enseignant</button>
+    <button class="w3-button w3-teal w3-xlarge w3-margin" onclick="window.location.href='pages/responsable_board.html'">Responsable Pédagogique</button>
+    <button class="w3-button w3-teal w3-xlarge w3-margin" onclick="window.location.href='pages/rh_directeur_board.html'">RH / Chef de Département</button>
 </div>
 
 </body>
