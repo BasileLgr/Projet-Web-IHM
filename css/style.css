@@ -1,0 +1,14 @@
+.border-size{
+    border-bottom-width: 3px !important;
+}
+
+.ligne{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+svg{
+    width: 100px;
+    height: 100px;
+}
