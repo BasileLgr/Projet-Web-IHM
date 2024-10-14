@@ -2,6 +2,8 @@
 
 **Description rapide** : Ce projet est une étude préliminaire dans le cadre du cours Interface Homme-Machine (IHM) de l'IUT Info 2A, année 2024-2025. Il vise à développer une maquette interactive d'une application web permettant de gérer un processus d'organisation de paiement pour les enseignants externes (vacataires) et les heures complémentaires des enseignants internes. Le projet inclut la conception de wireframes et de prototypes dynamiques.
 
+**Site** : Le [site](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/) est accessible à cette adresse [https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/).
+
 ## Table des matières
 
 1. [Contexte du projet](#contexte-du-projet)
@@ -76,6 +78,10 @@ Voici la structure des fichiers dans ce projet :
 1. **Maquettes fonctionnelles** : Les wireframes et wireflows sont inclus dans le projet et montrent l'architecture de navigation et les interfaces utilisateur clés.
 2. **Prototype dynamique** : Les pages incluent des exemples d'interactions comme la validation des heures et la navigation entre les différentes sections.
 3. **Responsive design** : La maquette est adaptée pour fonctionner sur différentes tailles d'écran grâce à l'utilisation de Web3CSS.
+
+## Site web
+
+Nous hébergeons notre [site](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/) à cette adresse [https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/).
 
 ## Auteurs
 
