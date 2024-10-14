@@ -25,13 +25,13 @@ L'application est développée pour répondre aux besoins des établissements d'
 1. Clonez ce dépôt sur votre machine :
 
    ```bash
-   git clone https://github.com/groupe/preprojetIHMFA2024.git
+   git clone https://grond.iut-fbleau.fr/legrelleb/PreprojetIHMFA2024
    ```
 
 2. Accédez au dossier du projet :
 
    ```bash
-   cd preprojetIHMFA2024
+   cd PreprojetIHMFA2024 
    ```
 
 3. Ouvrez le fichier ```index.html``` dans un navigateur pour visualiser la maquette.
