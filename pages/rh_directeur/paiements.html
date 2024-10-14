@@ -10,12 +10,125 @@
 <body>
 
 <!-- Conteneur principal -->
-<div class="border-size  w3-border-bottom w3-border-black ligne">
-    <a href="./board.html"><img src="../../svg/FBPAY.svg"  alt="FBPAY" ></a>
-
+<div class="border-size w3-border-bottom w3-border-black ligne">
+    <a href="./board.html"><img src="../../svg/FBPAY.svg" alt="FBPAY"></a>
     <p class="w3-xxlarge centered-text">Réalisation des paiements</p>
-    <p class="w3-margin">RH/Directeur | <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button></p>
+    <p class="w3-margin">RH/Directeur |
+        <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button>
+    </p>
 </div>
+
+<!-- Section pour les paiements -->
+<div class="w3-container w3-padding-64">
+    <h2 class="w3-center">Paiements en attente</h2>
+    <p class="w3-center">Liste des paiements à valider pour les enseignants et vacataires.</p>
+
+    <!-- Tableau des paiements -->
+    <div class="w3-responsive">
+        <table class="w3-table-all w3-centered w3-card-4">
+            <thead>
+            <tr class="w3-teal">
+                <th>Nom</th>
+                <th>Catégorie</th>
+                <th>Heures déclarées</th>
+                <th>Montant total (€)</th>
+                <th>Statut</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Ligne 1 -->
+            <tr>
+                <td>Jean Dupont</td>
+                <td>Enseignant permanent</td>
+                <td>192</td>
+                <td>8 352,00</td>
+                <td><span class="w3-tag w3-yellow">En attente</span></td>
+                <td>
+                    <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
+                    <button class="w3-btn w3-red w3-round-large" onclick="refuserPaiement(this)">Refuser</button>
+                </td>
+            </tr>
+            <!-- Ligne 2 -->
+            <tr>
+                <td>Marie Martin</td>
+                <td>Vacataire</td>
+                <td>64</td>
+                <td>2 784,00</td>
+                <td><span class="w3-tag w3-yellow">En attente</span></td>
+                <td>
+                    <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
+                    <button class="w3-btn w3-red w3-round-large" onclick="refuserPaiement(this)">Refuser</button>
+                </td>
+            </tr>
+            <!-- Ligne 3 -->
+            <tr>
+                <td>Luc Durand</td>
+                <td>Vacataire</td>
+                <td>48</td>
+                <td>2 088,00</td>
+                <td><span class="w3-tag w3-yellow">En attente</span></td>
+                <td>
+                    <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
+                    <button class="w3-btn w3-red w3-round-large" onclick="refuserPaiement(this)">Refuser</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Section pour les paiements validés -->
+<div class="w3-container w3-padding-64 w3-light-grey">
+    <h2 class="w3-center">Historique des paiements</h2>
+    <p class="w3-center">Voici l'historique des paiements validés.</p>
+
+    <!-- Historique des paiements -->
+    <div class="w3-responsive">
+        <table class="w3-table-all w3-centered w3-card-4">
+            <thead>
+            <tr class="w3-teal">
+                <th>Nom</th>
+                <th>Catégorie</th>
+                <th>Heures déclarées</th>
+                <th>Montant total (€)</th>
+                <th>Date de validation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Sophie Dubois</td>
+                <td>Vacataire</td>
+                <td>120</td>
+                <td>5 220,00</td>
+                <td>12/10/2024</td>
+            </tr>
+            <tr>
+                <td>Marc Leroy</td>
+                <td>Enseignant permanent</td>
+                <td>384</td>
+                <td>16 704,00</td>
+                <td>10/10/2024</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Script JavaScript pour simuler la validation et le refus de paiements -->
+<script>
+    function validerPaiement(button) {
+        var row = button.closest('tr');
+        row.querySelector('.w3-tag').className = 'w3-tag w3-green';
+        row.querySelector('.w3-tag').innerText = 'Validé';
+    }
+
+    function refuserPaiement(button) {
+        var row = button.closest('tr');
+        row.querySelector('.w3-tag').className = 'w3-tag w3-red';
+        row.querySelector('.w3-tag').innerText = 'Refusé';
+    }
+</script>
 
 </body>
 </html>
