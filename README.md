@@ -25,7 +25,7 @@ L'application est développée pour répondre aux besoins des établissements d'
 1. Clonez ce dépôt sur votre machine :
 
    ```bash
-   git clone https://grond.iut-fbleau.fr/legrelleb/PreprojetIHMFA2024
+   git clone https://grond.iut-fbleau.fr/legrelleb/PreprojetIHMFA2024.git
    ```
 
 2. Accédez au dossier du projet :
