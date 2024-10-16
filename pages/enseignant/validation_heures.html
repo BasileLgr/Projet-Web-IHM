@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
   <title>Validation des heures</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./../../css/style.css">
@@ -10,19 +11,81 @@
 <body>
 
 <!-- Conteneur principal -->
-<div class="border-size  w3-border-bottom w3-border-black ligne">
-  <a href="./board.html"><img src="../../svg/FBPAY.svg"  alt="FBPAY" ></a>
-
+<div class="border-size w3-border-bottom w3-border-black ligne">
+  <a href="./board.html"><img src="../../svg/FBPAY.svg" alt="FBPAY"></a>
   <p class="w3-xxlarge centered-text">Validation des heures</p>
-  <p class="w3-margin">Enseignant | <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button></p>
+  <p class="w3-margin">Enseignant | 
+    <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button>
+  </p>
 </div>
 
 <!-- Navbar -->
 <div class="w3-bar w3-teal">
   <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
   <a href="documents.html" class="w3-bar-item w3-button">Documents</a>
-  <a href="validation_heures.html" class="w3-bar-item w3-button">Validation des heures</a>
+  <a href="validation_heures.html" class="w3-bar-item w3-button w3-teal">Validation des heures</a>
 </div>
+
+<!-- Emploi du temps-->
+<div class="w3-center w3-margin-top">
+  <img id="scheduleImage" src="./edt1.png" alt="Emploi du temps" class="w3-margin-bottom" style="width: 100%; max-width: 900px; height: auto;">
+</div>
+
+<!-- Barre pour changer les semaines-->
+<div class="w3-card w3-padding w3-light-grey w3-round-large"  style="display: inline-block; margin-left: 27%; margin-top: 25px;">
+  <button class="w3-button w3-circle w3-teal" onclick="previousSchedule()">&#10094;</button>
+  <span id="scheduleDate" class="w3-bar-item">21/10 au 28/10</span>
+  <button class="w3-button w3-circle w3-teal" onclick="nextSchedule()">&#10095;</button>
+</div>
+
+<!-- Bouton valider-->
+<div class="w3-display-container" style="height: 100px;">
+  <div class="w3-display-bottomright w3-margin">
+    <button class="w3-button w3-green w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='block'">Valider</button>
+  </div>
+</div>
+
+<!-- Pop-up de confirmation -->
+<div id="validationModal" class="w3-modal">
+  <div class="w3-modal-content w3-animate-opacity w3-card-4">
+    <header class="w3-container w3-teal">
+      <span onclick="document.getElementById('validationModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h2>Confirmation</h2>
+    </header>
+    <div class="w3-container w3-teal">
+      <p>Voulez-vous vraiment valider vos heures ?</p>
+    </div>
+    <footer class="w3-container w3-teal w3-center">
+      <button class="w3-button w3-green w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='none'">Oui</button>
+      <button class="w3-button w3-red w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='none'">Non</button>
+    </footer>
+  </div>
+</div>
+
+<script>
+  let currentSchedule = 1;
+  const maxSchedule = 2;
+  const scheduleDates = ["21/10 au 28/10", "29/10 au 05/11"];
+
+  function previousSchedule() {
+    if (currentSchedule > 1) {
+      currentSchedule--;
+      updateSchedule();
+    }
+  }
+
+  function nextSchedule() {
+    if (currentSchedule < maxSchedule) {
+      currentSchedule++;
+      updateSchedule();
+    }
+  }
+
+  function updateSchedule() {
+    document.getElementById('scheduleImage').src = `./edt${currentSchedule}.png`;
+    document.getElementById('scheduleDate').textContent = scheduleDates[currentSchedule - 1];
+  }
+</script>
 
 </body>
 </html>
