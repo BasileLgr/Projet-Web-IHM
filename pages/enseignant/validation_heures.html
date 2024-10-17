@@ -28,7 +28,7 @@
 
 <!-- Emploi du temps-->
 <div class="w3-center w3-margin-top">
-  <img id="scheduleImage" src="./edt1.png" alt="Emploi du temps" class="w3-margin-bottom" style="width: 100%; max-width: 900px; height: auto;">
+  <img id="scheduleImage" src="../../img/edt1.png" alt="Emploi du temps" class="w3-margin-bottom" style="width: 100%; max-width: 900px; height: auto;">
 </div>
 
 <!-- Barre pour changer les semaines-->
@@ -82,7 +82,7 @@
   }
 
   function updateSchedule() {
-    document.getElementById('scheduleImage').src = `./edt${currentSchedule}.png`;
+    document.getElementById('scheduleImage').src = `../../img/edt${currentSchedule}.png`;
     document.getElementById('scheduleDate').textContent = scheduleDates[currentSchedule - 1];
   }
 </script>
