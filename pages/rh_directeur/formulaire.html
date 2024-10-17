@@ -33,7 +33,7 @@
     <h2 class="w3-center">Soumission du formulaire pour les vacataires</h2>
     <p class="w3-center">Veuillez remplir les informations suivantes pour créer ou mettre à jour un contrat vacataire.</p>
 
-    <form class="w3-container w3-card-4 w3-light-grey w3-padding" action="#" method="post">
+    <form class="w3-container w3-card-4 w3-light-grey w3-padding" action="#" method="get">
         <!-- Nom complet -->
         <label for="name" class="w3-text-teal"><b>Nom complet</b></label>
         <input class="w3-input w3-border w3-margin-bottom" type="text" id="name" name="name" placeholder="Nom complet" required>
@@ -44,7 +44,7 @@
 
         <!-- Numéro de téléphone -->
         <label for="phone" class="w3-text-teal"><b>Numéro de téléphone</b></label>
-        <input class="w3-input w3-border w3-margin-bottom" type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" required>
+        <input class="w3-input w3-border w3-margin-bottom" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Numéro de téléphone" required>
 
         <!-- Sélectionner la formation -->
         <label for="formation" class="w3-text-teal"><b>Formation concernée</b></label>
