@@ -7,6 +7,12 @@
   <title>Validation des heures</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./../../css/style.css">
+  <style>
+    /* Masquer les champs de texte par défaut */
+    #partialReason, #rejectReason {
+      display: none;
+    }
+  </style>
 </head>
 <body>
 
@@ -27,6 +33,16 @@
   <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
 </div>
 
+<!-- Menu déroulant pour sélectionner un enseignant -->
+<div class="w3-container w3-margin-top w3-center">
+  <label for="enseignant" class="w3-text-teal w3-large">Sélectionner un enseignant :</label>
+  <select id="enseignant" class="w3-select w3-border w3-round-large" style="width: 200px;">
+    <option value="1">Mme. Laleau</option>
+    <option value="2">M. Hernandez</option>
+    <option value="3">M. Madelaine</option>
+  </select>
+</div>
+
 <!-- Emploi du temps-->
 <div class="w3-center w3-margin-top">
   <img id="scheduleImage" src="../../img/edt1.png" alt="Emploi du temps" class="w3-margin-bottom" style="width: 100%; max-width: 900px; height: auto;">
@@ -42,7 +58,7 @@
 <!-- Bouton valider-->
 <div class="w3-display-container" style="height: 100px;">
   <div class="w3-display-bottomright w3-margin">
-    <button class="w3-button w3-green w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='block'">Valider</button>
+    <button class="w3-button w3-green w3-round-xlarge" onclick="openModal()">Valider</button>
   </div>
 </div>
 
@@ -50,16 +66,35 @@
 <div id="validationModal" class="w3-modal">
   <div class="w3-modal-content w3-animate-opacity w3-card-4">
     <header class="w3-container w3-teal">
-      <span onclick="document.getElementById('validationModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-      <h2>Confirmation</h2>
+      <span onclick="closeModal()" class="w3-button w3-display-topright">&times;</span>
+      <h2>Validation des heures</h2>
     </header>
     <div class="w3-container w3-teal">
-      <p>Voulez-vous vraiment valider vos heures ?</p>
+      <p>Quelle est votre décision ?</p>
+      <button class="w3-button w3-green w3-round-xlarge" onclick="closeModal()">Accepter</button>
+      <button class="w3-button w3-yellow w3-round-xlarge" onclick="showPartialValidation()">Accepter Partiellement</button>
+      <button class="w3-button w3-red w3-round-xlarge" onclick="showRejection()">Refuser</button>
     </div>
-    <footer class="w3-container w3-teal w3-center">
-      <button class="w3-button w3-green w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='none'">Oui</button>
-      <button class="w3-button w3-red w3-round-xlarge" onclick="document.getElementById('validationModal').style.display='none'">Non</button>
-    </footer>
+
+    <!-- Champs pour accepter partiellement -->
+    <div id="partialReason" class="w3-container">
+      <p>Nouvelle heure initiale :</p>
+      <input class="w3-input w3-border" type="text" placeholder="Nouvelle heure">
+      <p>Raison :</p>
+      <textarea class="w3-input w3-border" placeholder="Justification"></textarea>
+      <div class="w3-center w3-margin-top">
+        <button class="w3-button w3-green w3-round-xlarge" onclick="closeModal()">Valider</button>
+      </div>
+    </div>
+
+    <!-- Champs pour refuser -->
+    <div id="rejectReason" class="w3-container">
+      <p>Raison :</p>
+      <textarea class="w3-input w3-border" placeholder="Justification du refus"></textarea>
+      <div class="w3-center w3-margin-top">
+        <button class="w3-button w3-green w3-round-xlarge" onclick="closeModal()">Valider</button>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -85,6 +120,29 @@
   function updateSchedule() {
     document.getElementById('scheduleImage').src = `../../img/edt${currentSchedule}.png`;
     document.getElementById('scheduleDate').textContent = scheduleDates[currentSchedule - 1];
+  }
+
+  function openModal() {
+    document.getElementById('validationModal').style.display = 'block';
+  }
+
+  function closeModal() {
+    document.getElementById('validationModal').style.display = 'none';
+    // Réinitialisation des champs
+    document.getElementById('partialReason').style.display = 'none';
+    document.getElementById('rejectReason').style.display = 'none';
+  }
+  
+  function showPartialValidation() {
+    // section "Accepter Partiellement"
+    document.getElementById('partialReason').style.display = 'block';
+    document.getElementById('rejectReason').style.display = 'none';
+  }
+
+  function showRejection() {
+    // section "Refuser"
+    document.getElementById('rejectReason').style.display = 'block';
+    document.getElementById('partialReason').style.display = 'none';
   }
 </script>
 
