@@ -87,7 +87,7 @@ Nous hébergeons notre [site](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/) à
 
 Ce projet a été réalisé par les membres du groupe de travail suivant :
 - [BENBRAHIM Yassin](https://grond.iut-fbleau.fr/benbrahi)
-- [HOCHLAH Raphael](https://grond.iut-fbleau.fr/hochlaf) **Product Owner**
+- [HOCHLAF Raphael](https://grond.iut-fbleau.fr/hochlaf) **Product Owner**
 - [GHOUAR-TOUSSAINT Rafael](https://grond.iut-fbleau.fr/ghouar-t)
 - [ODDOS-MARCEL Gaël](https://grond.iut-fbleau.fr/oddos-ma)
 - [FOLLEA Thomas](https://grond.iut-fbleau.fr/follea)
