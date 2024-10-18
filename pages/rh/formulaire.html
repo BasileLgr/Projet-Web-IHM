@@ -39,11 +39,8 @@
             <thead>
             <tr class="w3-teal">
                 <th>Nom</th>
-                <th>Catégorie</th>
-                <th>CM</th>
-                <th>TD</th>
-                <th>TP</th>
-                <th>Montant total (€)</th>
+                <th>Contrat</th>
+                <th>Pièces justificatives</th>
                 <th>Statut</th>
                 <th>Action</th>
             </tr>
@@ -51,12 +48,9 @@
             <tbody>
             <!-- Ligne 1 -->
             <tr>
-                <td>Jean Dupont</td>
-                <td>Enseignant permanent</td>
-                <td>30</td>
-                <td>0</td>
-                <td>0</td>
-                <td>1 957.50</td>
+                <td>Maxim Lalane</td>
+                <td><a href="#" class="w3-text-teal">Contrat_Lalane.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -65,12 +59,9 @@
             </tr>
             <!-- Ligne 2 -->
             <tr>
-                <td>Marie Martin</td>
-                <td>Vacataire</td>
-                <td>10</td>
-                <td>20</td>
-                <td>26</td>
-                <td>1 304.50</td>
+                <td>Moncef STITI</td>
+                <td><a href="#" class="w3-text-teal">ContratStiti.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -79,12 +70,9 @@
             </tr>
             <!-- Ligne 3 -->
             <tr>
-                <td>Luc Durand</td>
-                <td>Vacataire</td>
-                <td>20</td>
-                <td>48</td>
-                <td>15</td>
-                <td>3 719.25</td>
+                <td>Kylian MBAPPE</td>
+                <td><a href="#" class="w3-text-teal">Contrat-Mbappe.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -95,6 +83,20 @@
         </table>
     </div>
 </div>
+
+<script>
+    function validerPaiement(button) {
+        var row = button.closest('tr');
+        row.querySelector('.w3-tag').className = 'w3-tag w3-green';
+        row.querySelector('.w3-tag').innerText = 'Validé';
+    }
+
+    function refuserPaiement(button) {
+        var row = button.closest('tr');
+        row.querySelector('.w3-tag').className = 'w3-tag w3-red';
+        row.querySelector('.w3-tag').innerText = 'Refusé';
+    }
+</script>
 
 </body>
 </html>
