@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
+    <title>Formulaire des vacataires</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./../../css/style.css">
+</head>
+<body>
+
+<!-- Conteneur principal -->
+<div class="border-size w3-border-bottom w3-border-black ligne">
+    <a href="./board.html"><img src="../../svg/FBPAY.svg" alt="FBPAY"></a>
+    <p class="w3-margin">RH/Directeur |
+        <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button>
+    </p>
+</div>
+
+<!-- Navbar -->
+<div class="w3-bar w3-teal">
+    <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
+    <a href="documents.html" class="w3-bar-item w3-button">Documents</a>
+    <a href="validation_heures.html" class="w3-bar-item w3-button">Validation des heures</a>
+    <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
+    <a href="formulaire.html" class="w3-bar-item w3-button selected">Creation de formulaire</a>
+  </div>
+
+<!-- Section formulaire des vacataires -->
+<div class="w3-container w3-padding-64">
+    <h2 class="w3-center">Soumission du formulaire pour les vacataires</h2>
+    <p class="w3-center">Veuillez remplir les informations suivantes pour créer ou mettre à jour un contrat vacataire.</p>
+
+    <form class="w3-container w3-card-4 w3-light-grey w3-padding" action="#" method="get">
+        <!-- Nom complet -->
+        <label for="name" class="w3-text-teal"><b>Nom complet</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="text" id="name" name="name" placeholder="Nom complet" required>
+
+        <!-- Adresse email -->
+        <label for="email" class="w3-text-teal"><b>Email</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="email" id="email" name="email" placeholder="Adresse email" required>
+
+        <!-- Numéro de téléphone -->
+        <label for="phone" class="w3-text-teal"><b>Numéro de téléphone</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Numéro de téléphone" required>
+
+        <!-- Sélectionner la formation -->
+        <label for="formation" class="w3-text-teal"><b>Formation concernée</b></label>
+        <select class="w3-select w3-border w3-margin-bottom" id="formation" name="formation" required>
+            <option value="" disabled selected>Choisissez la formation</option>
+            <option value="informatique">Informatique</option>
+            <option value="gestion">GEA</option>
+            <option value="biologie">Kine</option>
+            <!-- Vous pouvez ajouter plus de formations ici -->
+        </select>
+
+
+        <!-- Sélectionner le semestre -->
+        <label for="semestre" class="w3-text-teal"><b>Semestre </b></label>
+        <select class="w3-select w3-border w3-margin-bottom" id="semestre" name="semestre" required>
+            <option value="" disabled selected>Choisissez le semestre</option>
+            <option value="S1">S1</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+            <option value="S4">S4</option>
+            <option value="S5">S5</option>
+            <option value="S6">S5</option>
+        </select>
+
+        <!-- Nombre d'heures -->
+        <label for="hours" class="w3-text-teal"><b>Nombre d'heures prévues</b></label><br>
+        <input class="w3-input w3-border w3-margin-bottom" type="number" id="hours" name="hours" min="0" placeholder="Nombre d'heures prévues" required>
+
+        <!-- importer emploi du temps -->
+        <label for="edt" class="w3-text-teal"><b>Importer emploi du temps en .csv</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="file" id="edt" name="edt" required>
+
+
+        <!-- Bouton d'envoi -->
+        <button class="w3-btn w3-teal w3-round-large w3-margin-top" type="submit">Soumettre</button>
+    </form>
+</div>
+
+</body>
+</html>
