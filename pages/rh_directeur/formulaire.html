@@ -56,13 +56,27 @@
             <!-- Vous pouvez ajouter plus de formations ici -->
         </select>
 
+
+        <!-- Sélectionner le semestre -->
+        <label for="semestre" class="w3-text-teal"><b>Semestre </b></label>
+        <select class="w3-select w3-border w3-margin-bottom" id="semestre" name="semestre" required>
+            <option value="" disabled selected>Choisissez le semestre</option>
+            <option value="S1">S1</option>
+            <option value="S2">S2</option>
+            <option value="S3">S3</option>
+            <option value="S4">S4</option>
+            <option value="S5">S5</option>
+            <option value="S6">S5</option>
+        </select>
+
         <!-- Nombre d'heures -->
-        <label for="hours" class="w3-text-teal"><b>Nombre d'heures prévues</b></label>
+        <label for="hours" class="w3-text-teal"><b>Nombre d'heures prévues</b></label><br>
         <input class="w3-input w3-border w3-margin-bottom" type="number" id="hours" name="hours" min="0" placeholder="Nombre d'heures prévues" required>
 
-        <!-- Téléchargement de documents -->
-        <label for="documents" class="w3-text-teal"><b>Documents justificatifs</b></label>
-        <input class="w3-input w3-border w3-margin-bottom" type="file" id="documents" name="documents" required>
+        <!-- importer emploi du temps -->
+        <label for="edt" class="w3-text-teal"><b>Importer emploi du temps en .csv</b></label>
+        <input class="w3-input w3-border w3-margin-bottom" type="file" id="edt" name="edt" required>
+
 
         <!-- Bouton d'envoi -->
         <button class="w3-btn w3-teal w3-round-large w3-margin-top" type="submit">Soumettre</button>
