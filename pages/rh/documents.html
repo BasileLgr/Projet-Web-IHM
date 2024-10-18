@@ -2,8 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
   <title>Documents</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="./../../css/style.css">
@@ -13,7 +12,7 @@
 <!-- Conteneur principal -->
 <div class="border-size w3-border-bottom w3-border-black ligne">
   <a href="./board.html"><img src="../../svg/FBPAY.svg" alt="FBPAY"></a>
-  <p class="w3-margin">Enseignant |
+  <p class="w3-margin">RH |
     <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button>
   </p>
 </div>
@@ -21,35 +20,33 @@
 <!-- Navbar -->
 <div class="w3-bar w3-teal">
   <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
-  <a href="documents.html" class="w3-bar-item w3-button selected">Documents</a>
-  <a href="validation_heures.html" class="w3-bar-item w3-button">Validation des heures</a>
-</div>
+  <a href="documents.html" class="w3-bar-item w3-button selected">Documents vacataires</a>
+  <a href="formulaire.html" class="w3-bar-item w3-button">Formulaire des vacataires</a>
+  <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
+  <a href="paiements.html" class="w3-bar-item w3-button">Réaliser un paiement</a>
+  <a href="bilan.html" class="w3-bar-item w3-button">Générer le bilan comptable</a>
+  </div>
 
-<!-- Section d'envoi de documents -->
-<div class="w3-container w3-padding-64">
-  <h2 class="w3-center">Envoyer un document</h2>
-  <form class="w3-container w3-card-4 w3-light-grey w3-padding" id="uploadForm">
-    <label for="fileUpload" class="w3-text-teal"><b>Sélectionner un document :</b></label>
-    <input class="w3-input w3-border w3-margin-bottom" type="file" id="fileUpload" required>
-
-    <label for="description" class="w3-text-teal"><b>Description :</b></label>
-    <input class="w3-input w3-border w3-margin-bottom" type="text" id="description" placeholder="Ajouter une description du document (facultatif)">
-
-    <button type="button" class="w3-btn w3-teal w3-round-large" onclick="submitForm()">Envoyer</button>
-    <p id="confirmationMessage" class="w3-text-teal" style="display:none;">Document envoyé avec succès (fictivement) !</p>
-  </form>
+<!-- Menu déroulant pour sélectionner un enseignant -->
+<div class="w3-container w3-margin-top w3-center w3-padding-32">
+  <label for="enseignant" class="w3-text-teal w3-large">Sélectionner un enseignant :</label>
+  <select id="enseignant" class="w3-select w3-border w3-round-large" style="width: 200px;">
+    <option value="1">Mme. Laleau</option>
+    <option value="2">M. Hernandez</option>
+    <option value="3">M. Madelaine</option>
+  </select>
 </div>
 
 <!-- Section de réception des documents -->
-<div class="w3-container w3-padding-64">
+<div class="w3-container">
   <h2 class="w3-center">Documents reçus</h2>
   <ul class="w3-ul w3-border w3-white">
     <li class="w3-padding-16">
-      <span class="w3-large">Document1.pdf</span>
+      <span class="w3-large">CNI.pdf</span>
       <p>Description du document reçu. <a href="#" class="w3-text-teal">Télécharger</a></p>
     </li>
     <li class="w3-padding-16">
-      <span class="w3-large">Document2.docx</span>
+      <span class="w3-large">Justificatif_de_domicile.docx</span>
       <p>Description du document reçu. <a href="#" class="w3-text-teal">Télécharger</a></p>
     </li>
   </ul>

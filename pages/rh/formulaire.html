@@ -2,8 +2,9 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
-    <title>Réalisation des paiements</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
+    <title>Formulaire des vacataires</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="./../../css/style.css">
 </head>
@@ -12,7 +13,7 @@
 <!-- Conteneur principal -->
 <div class="border-size w3-border-bottom w3-border-black ligne">
     <a href="./board.html"><img src="../../svg/FBPAY.svg" alt="FBPAY"></a>
-    <p class="w3-margin">Chef de Département | 
+    <p class="w3-margin">RH |
         <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button>
     </p>
 </div>
@@ -20,16 +21,17 @@
 <!-- Navbar -->
 <div class="w3-bar w3-teal">
     <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
-    <a href="documents.html" class="w3-bar-item w3-button">Documents</a>
+    <a href="documents.html" class="w3-bar-item w3-button">Documents vacataires</a>
+    <a href="formulaire.html" class="w3-bar-item w3-button selected">Formulaire des vacataires</a>
     <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
-    <a href="paiements.html" class="w3-bar-item w3-button selected">Réaliser un paiement</a>
+    <a href="paiements.html" class="w3-bar-item w3-button">Réaliser un paiement</a>
     <a href="bilan.html" class="w3-bar-item w3-button">Générer le bilan comptable</a>
 </div>
 
 <!-- Section pour les paiements -->
 <div class="w3-container w3-padding-64">
-    <h2 class="w3-center">Paiements en attente</h2>
-    <p class="w3-center">Liste des paiements à valider pour les enseignants et vacataires.</p>
+    <h2 class="w3-center">Validation des contrats</h2>
+    <p class="w3-center">Liste des contrats des futurs vacataires.</p>
 
     <!-- Tableau des paiements -->
     <div class="w3-responsive">
@@ -37,11 +39,8 @@
             <thead>
             <tr class="w3-teal">
                 <th>Nom</th>
-                <th>Catégorie</th>
-                <th>CM</th>
-                <th>TD</th>
-                <th>TP</th>
-                <th>Montant total (€)</th>
+                <th>Contrat</th>
+                <th>Pièces justificatives</th>
                 <th>Statut</th>
                 <th>Action</th>
             </tr>
@@ -49,12 +48,9 @@
             <tbody>
             <!-- Ligne 1 -->
             <tr>
-                <td>Jean Dupont</td>
-                <td>Enseignant permanent</td>
-                <td>30</td>
-                <td>0</td>
-                <td>0</td>
-                <td>1 957.50</td>
+                <td>Maxim Lalane</td>
+                <td><a href="#" class="w3-text-teal">Contrat_Lalane.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -63,12 +59,9 @@
             </tr>
             <!-- Ligne 2 -->
             <tr>
-                <td>Marie Martin</td>
-                <td>Vacataire</td>
-                <td>10</td>
-                <td>20</td>
-                <td>26</td>
-                <td>1 304.50</td>
+                <td>Moncef STITI</td>
+                <td><a href="#" class="w3-text-teal">ContratStiti.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -77,12 +70,9 @@
             </tr>
             <!-- Ligne 3 -->
             <tr>
-                <td>Luc Durand</td>
-                <td>Vacataire</td>
-                <td>20</td>
-                <td>48</td>
-                <td>15</td>
-                <td>3 719.25</td>
+                <td>Kylian MBAPPE</td>
+                <td><a href="#" class="w3-text-teal">Contrat-Mbappe.pdf</a></td>
+                <td><input type="checkbox"></td>
                 <td><span class="w3-tag w3-yellow">En attente</span></td>
                 <td>
                     <button class="w3-btn w3-green w3-round-large" onclick="validerPaiement(this)">Valider</button>
@@ -94,50 +84,6 @@
     </div>
 </div>
 
-<!-- Section pour les paiements validés -->
-<div class="w3-container w3-padding-64 w3-light-grey">
-<h2 class="w3-center">Historique des paiements</h2>
-<p class="w3-center">Voici l'historique des paiements validés.</p>
-
-<!-- Historique des paiements -->
-<div class="w3-responsive">
-        <table class="w3-table-all w3-centered w3-card-4">
-            <thead>
-            <tr class="w3-teal">
-                <th>Nom</th>
-                <th>Catégorie</th>
-                <th>CM</th>
-                <th>TD</th>
-                <th>TP</th>
-                <th>Montant total (€)</th>
-                <th>Date de validation</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Sophie Dubois</td>
-                <td>Vacataire</td>
-                <td>26</td>
-                <td>102</td>
-                <td>46</td>
-                <td>7 134.00</td>
-                <td>12/10/2024</td>
-            </tr>
-            <tr>
-                <td>Marc Leroy</td>
-                <td>Enseignant permanent</td>
-                <td>50</td>
-                <td>234</td>
-                <td>105</td>
-                <td>15 725.25</td>
-                <td>10/10/2024</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- Script JavaScript pour simuler la validation et le refus de paiements -->
 <script>
     function validerPaiement(button) {
         var row = button.closest('tr');
