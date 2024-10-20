@@ -1,91 +1,91 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
-  <title>Inspection des heures</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="./../../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="../../svg/logo.ico">
+    <title>Inspection des heures</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="./../../css/style.css">
 </head>
 <body>
 
 <!-- Conteneur principal -->
 <div class="border-size  w3-border-bottom w3-border-black ligne">
-  <a href="./board.html"><img src="../../svg/FBPAY.svg"  alt="FBPAY" ></a>
-  <p class="w3-margin">Responsable | <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button></p>
+    <a href="./board.html"><img src="../../svg/FBPAY.svg"  alt="FBPAY" ></a>
+    <p class="w3-margin">Responsable | <button class="w3-btn w3-white w3-border w3-border-teal w3-round-xlarge" onclick="window.location.href='../../index.html'">Déconnexion</button></p>
 </div>
 
 <!-- Navbar -->
 <div class="w3-bar w3-teal">
-  <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
-  <a href="documents.html" class="w3-bar-item w3-button">Documents</a>
-  <a href="validation_heures.html" class="w3-bar-item w3-button">Validation des heures</a>
-  <a href="inspection_heures.html" class="w3-bar-item w3-button selected">Inspection des heures</a>
-  <a href="formulaire.html" class="w3-bar-item w3-button">Creation de formulaire</a>
+    <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
+    <a href="documents.html" class="w3-bar-item w3-button">Documents</a>
+    <a href="validation_heures.html" class="w3-bar-item w3-button">Validation des heures</a>
+    <a href="inspection_heures.html" class="w3-bar-item w3-button selected">Inspection des heures</a>
+    <a href="formulaire.html" class="w3-bar-item w3-button">Creation de formulaire</a>
 </div>
 
 <!-- Section pour les paiements -->
 <div class="w3-container w3-padding-64">
-  <h2 class="w3-center">Paiements en attente</h2>
-  <p class="w3-center">Liste des paiements à valider pour les enseignants et vacataires.</p>
+    <h2 class="w3-center">Informations sur les heures de travails</h2>
+    <p class="w3-center">Liste des enseignants/vacataires avec leurs heures de travail déclarées en fonctions des heures prévues.</p>
 
-  <!-- Tableau des paiements -->
-  <div class="w3-responsive">
-      <table class="w3-table-all w3-centered w3-card-4">
-          <thead>
-          <tr class="w3-teal">
-              <th>Nom</th>
-              <th>Catégorie</th>
-              <th>Heures déclarées</th>
-              <th>Heures prévues</th>
-              <th>Taux de travail</th>
-          </tr>
-          </thead>
-          <tbody>
-          <!-- Ligne 1 -->
-          <tr>
-              <td>Jean Dupont</td>
-              <td>Enseignant permanent</td>
-              <td>0</td>
-              <td>30</td>
-              <td class="w3-red">0%</td>
-          </tr>
-          <!-- Ligne 2 -->
-          <tr>
-              <td>Marie Martin</td>
-              <td>Vacataire</td>
-              <td>10</td>
-              <td>20</td>
-              <td class="w3-light-green">50%</td>
-          </tr>
-          <!-- Ligne 3 -->
-          <tr>
-              <td>Luc Durand</td>
-              <td>Vacataire</td>
-              <td>40</td>
-              <td>48</td>
-              <td class="w3-green">83%</td>
-          </tr>
-          
-          <!-- Ligne 4 -->
-          <tr>
-              <td>Sophie Dubois</td>
-              <td>Vacataire</td>
-              <td>26</td>
-              <td>102</td>
-              <td class="w3-amber">25%</td>
-          </tr>
-          <!-- Ligne 5 -->
-          <tr>
-              <td>Marc Leroy</td>
-              <td>Enseignant permanent</td>
-              <td>50</td>
-              <td>100</td>
-              <td class="w3-light-green">50%</td>
-          </tr>
-          </tbody>
-      </table>
-  </div>
+    <!-- Tableau des paiements -->
+    <div class="w3-responsive">
+        <table class="w3-table-all w3-centered w3-card-4">
+            <thead>
+            <tr class="w3-teal">
+                <th>Nom</th>
+                <th>Catégorie</th>
+                <th>Heures déclarées</th>
+                <th>Heures prévues</th>
+                <th>Taux de travail</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Ligne 1 -->
+            <tr>
+                <td>Jean Dupont</td>
+                <td>Enseignant permanent</td>
+                <td>0</td>
+                <td>30</td>
+                <td class="w3-red">0%</td>
+            </tr>
+            <!-- Ligne 2 -->
+            <tr>
+                <td>Marie Martin</td>
+                <td>Vacataire</td>
+                <td>10</td>
+                <td>20</td>
+                <td class="w3-light-green">50%</td>
+            </tr>
+            <!-- Ligne 3 -->
+            <tr>
+                <td>Luc Durand</td>
+                <td>Vacataire</td>
+                <td>40</td>
+                <td>48</td>
+                <td class="w3-green">83%</td>
+            </tr>
+
+            <!-- Ligne 4 -->
+            <tr>
+                <td>Sophie Dubois</td>
+                <td>Vacataire</td>
+                <td>26</td>
+                <td>102</td>
+                <td class="w3-amber">25%</td>
+            </tr>
+            <!-- Ligne 5 -->
+            <tr>
+                <td>Marc Leroy</td>
+                <td>Enseignant permanent</td>
+                <td>50</td>
+                <td>100</td>
+                <td class="w3-light-green">50%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 </body>
