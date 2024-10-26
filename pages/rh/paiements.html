@@ -28,8 +28,8 @@
             <a href="documents.html" class="w3-bar-item w3-button">Documents vacataires</a>
             <a href="formulaire.html" class="w3-bar-item w3-button">Formulaire des vacataires</a>
             <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
-            <a href="paiements.html" class="w3-bar-item w3-button">Réaliser un paiement</a>
-            <a href="bilan.html" class="w3-bar-item w3-button selected">Générer le bilan comptable</a>
+            <a href="paiements.html" class="w3-bar-item w3-button selected">Réaliser un paiement</a>
+            <a href="bilan.html" class="w3-bar-item w3-button">Générer le bilan comptable</a>
         </div>
     </div>
 </div>
@@ -160,6 +160,13 @@
     }
     var menuBurger = document.querySelector(".menu-burger");
     var burger = document.querySelector(".burger");
+  if (window.innerWidth <= 1150){
+    if (!menuBurger.classList.contains("invisible")){
+        menuBurger.classList.toggle("invisible");
+    }
+  }else{
+    menuBurger.classList.remove("invisible")
+  }
 
     burger.addEventListener("click", () => {
         menuBurger.classList.toggle("invisible");
