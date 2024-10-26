@@ -23,3 +23,60 @@ img{
     width: 100px;
     height: 100px;
 }
+
+.document{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.boutons{
+    display: grid;
+    gap: 100px;
+    padding: 10px;
+}
+
+.invisible{
+    display: none;
+}
+
+.navbar{
+    position: relative;
+}
+
+.menu-burger-position{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.burger{
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.menu-burger-position a{
+    height: 50px;
+}
+
+@media screen and (max-width: 1000px){
+    .document{
+        grid-template-columns: 1fr;
+    }
+    .boutons{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .menu{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+}

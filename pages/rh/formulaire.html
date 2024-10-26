@@ -19,13 +19,20 @@
 </div>
 
 <!-- Navbar -->
-<div class="w3-bar w3-teal">
-    <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
-    <a href="documents.html" class="w3-bar-item w3-button">Documents vacataires</a>
-    <a href="formulaire.html" class="w3-bar-item w3-button selected">Formulaire des vacataires</a>
-    <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
-    <a href="paiements.html" class="w3-bar-item w3-button">Réaliser un paiement</a>
-    <a href="bilan.html" class="w3-bar-item w3-button">Générer le bilan comptable</a>
+<div class="navbar">
+    <div class="w3-bar w3-teal">
+        <img src="./../../img/burger-bar.png" alt="" class="burger">
+    </div>
+    <div class="w3-bar w3-teal menu-burger invisible">
+        <div class="w3-bar w3-teal">
+            <a href="board.html" class="w3-bar-item w3-button">Accueil</a>
+            <a href="documents.html" class="w3-bar-item w3-button">Documents vacataires</a>
+            <a href="formulaire.html" class="w3-bar-item w3-button">Formulaire des vacataires</a>
+            <a href="inspection_heures.html" class="w3-bar-item w3-button">Inspection des heures</a>
+            <a href="paiements.html" class="w3-bar-item w3-button">Réaliser un paiement</a>
+            <a href="bilan.html" class="w3-bar-item w3-button selected">Générer le bilan comptable</a>
+        </div>
+    </div>
 </div>
 
 <!-- Section pour les paiements -->
@@ -96,6 +103,21 @@
         row.querySelector('.w3-tag').className = 'w3-tag w3-red';
         row.querySelector('.w3-tag').innerText = 'Refusé';
     }
+    var menuBurger = document.querySelector(".menu-burger");
+    var burger = document.querySelector(".burger");
+
+    burger.addEventListener("click", () => {
+        menuBurger.classList.toggle("invisible");
+    })
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 1150){
+            if (!menuBurger.classList.contains("invisible")){
+                menuBurger.classList.toggle("invisible");
+            }
+        }else{
+        menuBurger.classList.remove("invisible")
+        }
+    });
 </script>
 
 </body>
