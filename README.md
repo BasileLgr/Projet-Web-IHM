@@ -79,10 +79,6 @@ Voici la structure des fichiers dans ce projet :
 2. **Prototype dynamique** : Les pages incluent des exemples d'interactions comme la validation des heures et la navigation entre les différentes sections.
 3. **Responsive design** : La maquette est adaptée pour fonctionner sur différentes tailles d'écran grâce à l'utilisation de Web3CSS.
 
-## Site web
-
-Nous hébergeons notre [site](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/) à cette adresse [https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/](https://dwarves.iut-fbleau.fr/~hochlaf/FBpaie/).
-
 ## Auteurs
 
 Ce projet a été réalisé par les membres du groupe de travail suivant :
